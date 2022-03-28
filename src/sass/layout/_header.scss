@@ -1,0 +1,41 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #020203;
+    padding: 1em;
+    
+
+    img {
+        width: 10em;
+    }
+
+    &_nav_t {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin-right: 4em;
+        
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 500;
+        }
+    }
+
+    &_nav_l {
+        display: flex;
+        flex-direction: column;
+        background: #020203;
+        width: 8%;
+
+        img {
+            width: 4em;
+            margin: auto;
+        }
+    }
+}
+
+    

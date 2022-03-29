@@ -5,6 +5,7 @@ import Swimming from './assets/swimming.svg'
 import Charts1 from './components/Charts1'
 import Charts2 from './components/Charts2'
 import Charts3 from './components/Charts3'
+import PieChart4 from './components/PieChart'
 import { useParams } from 'react-router-dom'
 import Energy from './assets/energy.svg'
 import Chicken from './assets/chicken.svg'
@@ -19,6 +20,8 @@ export default function Dashboard() {
     const idFinal = Number(id)
     
     const { data, isLoading } = useFetch(`http://localhost:5500/user/${idFinal}`)
+    
+    console.log(data)
 
     if (!isLoading) {
         return (
@@ -36,6 +39,7 @@ export default function Dashboard() {
                         <Charts1 id={idFinal} />
                         <Charts2 id={idFinal} />
                         <Charts3 id={idFinal} />
+                        <PieChart4 id={idFinal} />
                     </div>
                     <div className='dashboard_scores'>
                         <div className='calories'>

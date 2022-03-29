@@ -9,7 +9,27 @@ export default function Charts3(props) {
   //Code pour map les numero avec les titre (Tranformer l'objet)
   // kind 1
 
+  
+
+  
+
+  
+
   if (!isLoading) {
+
+    let kindsNumber = data.data.kind
+
+    console.log(kindsNumber)
+
+    let kinds = data.data.data
+
+    console.log(kinds)
+
+    // kinds.map(kind => {
+    //   kind = kindsNumber
+    //   console.log(kind)
+    // })
+
     return (
       <div className='charts3'>
         <RadarChart cx={150} cy={150} outerRadius={150} width={300} height={300} data={data.data.data}>

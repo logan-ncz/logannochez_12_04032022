@@ -41,8 +41,8 @@ export default function Charts2(props) {
     return (
       <div className='charts2'>
         <LineChart
-          width={300}
-          height={300}
+          width={280}
+          height={263}
           data={data.data.sessions}
           margin={{
             top: 20,
@@ -52,7 +52,7 @@ export default function Charts2(props) {
           }}
         >
           <CartesianGrid strokeDasharray="0 1" />
-          <XAxis dataKey="day" height={30} stroke={0} tick={{ fill: "#FFFFFF", dx: 20 }} tickFormatter={changeDaysInLetters} />
+          <XAxis dataKey="day" height={30} stroke={0} tick={{ fill: "#FFFFFF" }} tickFormatter={changeDaysInLetters} />
           <Tooltip wrapperStyle={{ width: 50, backgroundColor: '#fff', color: '#000000' }} content={<CustomTooltip />} cursor={<CustomHover />} />
           <Line type="monotone" dataKey="sessionLength" stroke="#fff" dot={0} />
         </LineChart>

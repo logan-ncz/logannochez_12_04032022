@@ -8,35 +8,18 @@ export default function Charts3(props) {
 
   //Code pour map les numero avec les titre (Tranformer l'objet)
   // kind 1
-
   
-  const kinds = { 1: "cardio", 2: "energy", 3: "endurance", 4: "strength", 5: "speed", 6: "intensity" };
+  const kinds = { 1: "Cardio", 2: "Energie", 3: "Endurance", 4: "Force", 5: "Vitesse", 6: "Intensité" };
 
   const changeNumbersInKinds = (number) => kinds[number];
-  
-
-  
 
   if (!isLoading) {
 
-    // let kindsNumber = data.data.kind
-
-    // console.log(kindsNumber)
-
-    // let kinds = data.data.data
-
-    // console.log(kinds)
-
-    // kinds.map(kind => {
-    //   kind = kindsNumber
-    //   console.log(kind)
-    // })
-
     return (
       <div className='charts3'>
-        <RadarChart cx="50%" cy="50%" outerRadius="65%" width={258} height={263} data={data.data.data}>
+        <RadarChart cx="50%" cy="50%" outerRadius="65%" width={280} height={263} data={data.data.data}>
           <PolarGrid radialLines={false} />
-          <PolarAngleAxis dataKey="kind" stroke='#fff' tickFormatter={changeNumbersInKinds} />
+          <PolarAngleAxis dataKey="kind" stroke='#fff' strokeWidth={0} tick={{ fontSize: "12px", fontFamily: 'Roboto' }} tickFormatter={changeNumbersInKinds} />
           <Radar dataKey="value" fill="#FF0101" fillOpacity={0.7} />
         </RadarChart>
       </div>

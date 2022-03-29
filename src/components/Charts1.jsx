@@ -1,4 +1,4 @@
-import { BarChart, Bar, XAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import { useFetch } from '../utils/Fetch'
 
 function CustomTooltip({ payload, active }) {
@@ -32,15 +32,22 @@ export default function Charts1(props) {
       <div>
         <BarChart
           width={600}
-          height={300}
+          height={320}
+          margin={{
+            top: 20,
+            right: 10,
+            left: 10,
+            bottom: 10,
+          }}
           data={data.data.sessions}
         >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="day" />
+          <CartesianGrid vertical={false} strokeDasharray="3 3" />
+          <XAxis dataKey="day" stroke='0' tickMargin={20} />
+          <YAxis orientation='right' stroke='0' tickMargin={30} />
           <Tooltip wrapperStyle={{ width: 50, backgroundColor: '#E60000', color: '#fff' }} content={<CustomTooltip />}/>
-          <Legend />
-          <Bar dataKey="kilogram" fill="#282D30" />
-          <Bar dataKey="calories" fill="#E60000" />
+          <Legend verticalAlign='top' align='right' />
+          <Bar dataKey="kilogram" fill="#282D30" radius={[20, 20, 0, 0]} barSize={10} />
+          <Bar dataKey="calories" fill="#E60000" radius={[20, 20, 0, 0]} barSize={10} />
         </BarChart>
       </div>
     );

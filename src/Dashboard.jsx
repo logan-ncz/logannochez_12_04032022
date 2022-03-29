@@ -35,8 +35,11 @@ export default function Dashboard() {
                         <p className='dashboard_hello'>Bonjour <b>{data.data.userInfos.firstName}</b></p>
                         <p className='dashboard_congratulations'>Félicitations ! Vous avez explosé vos objectifs hier 👏</p>
                         <Charts1 id={idFinal} />
-                        <Charts2 id={idFinal} />
-                        <Charts3 id={idFinal} />
+                        <div className='dashboard_charts_2_3'>
+                            <Charts2 id={idFinal} />
+                            <Charts3 id={idFinal} />
+                        </div>
+                        
                         <PieChart4 id={idFinal} />
                     </div>
                     <div className='dashboard_scores'>

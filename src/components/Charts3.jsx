@@ -17,13 +17,13 @@ export default function Charts3(props) {
 
   if (!isLoading) {
 
-    let kindsNumber = data.data.kind
+    // let kindsNumber = data.data.kind
 
-    console.log(kindsNumber)
+    // console.log(kindsNumber)
 
-    let kinds = data.data.data
+    // let kinds = data.data.data
 
-    console.log(kinds)
+    // console.log(kinds)
 
     // kinds.map(kind => {
     //   kind = kindsNumber

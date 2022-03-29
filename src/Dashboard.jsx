@@ -20,8 +20,6 @@ export default function Dashboard() {
     const idFinal = Number(id)
     
     const { data, isLoading } = useFetch(`http://localhost:5500/user/${idFinal}`)
-    
-    console.log(data)
 
     if (!isLoading) {
         return (

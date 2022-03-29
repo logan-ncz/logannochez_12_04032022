@@ -4,20 +4,6 @@ import React, { PureComponent } from 'react';
 import { LineChart, Line, XAxis, CartesianGrid, Tooltip, } from 'recharts';
 import { useFetch } from '../utils/Fetch'
 
-  
-class CustomizedAxisTick extends PureComponent {
-    render() {
-      const { x, y, payload } = this.props;
-  
-      return (
-        <g transform={`translate(${x},${y})`}>
-          <text x={0} y={0} dy={16} textAnchor="end" fill="#fff">
-            {payload.value}
-          </text>
-        </g>
-      );
-    }
-}
 
 function CustomTooltip({ payload, label, active }) {
     if (active) {
@@ -52,6 +38,8 @@ export default function Charts2(props) {
 
   if (!isLoading) {
 
+    console.log(data.data.sessions)
+
     return (
       <div className='charts2'>
         <LineChart
@@ -66,7 +54,7 @@ export default function Charts2(props) {
           }}
         >
           <CartesianGrid strokeDasharray="0 1" />
-          <XAxis dataKey="day" height={30} stroke={0} tick={<CustomizedAxisTick />} tickFormatter={changeDaysInLetters} />
+          <XAxis dataKey="day" height={30} strokeDasharray="0 1" stroke="#fff" tickFormatter={changeDaysInLetters} />
           <Tooltip wrapperStyle={{ width: 50, backgroundColor: '#fff', color: '#000000' }} content={<CustomTooltip />} cursor={<CustomHover />} />
           <Line type="monotone" dataKey="sessionLength" stroke="#fff" dot={0} />
         </LineChart>

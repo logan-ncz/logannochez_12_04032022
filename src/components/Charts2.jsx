@@ -1,11 +1,11 @@
 /* eslint-disable max-classes-per-file */
 /* eslint-disable react/no-multi-comp */
-import React, { PureComponent } from 'react';
+import React from 'react';
 import { LineChart, Line, XAxis, CartesianGrid, Tooltip, } from 'recharts';
 import { useFetch } from '../utils/Fetch'
 
 
-function CustomTooltip({ payload, label, active }) {
+function CustomTooltip({ payload, active }) {
     if (active) {
       return (
         <div className="custom-tooltip2">
@@ -38,8 +38,6 @@ export default function Charts2(props) {
 
   if (!isLoading) {
 
-    console.log(data.data.sessions)
-
     return (
       <div className='charts2'>
         <LineChart
@@ -54,7 +52,7 @@ export default function Charts2(props) {
           }}
         >
           <CartesianGrid strokeDasharray="0 1" />
-          <XAxis dataKey="day" height={30} strokeDasharray="0 1" stroke="#fff" tickFormatter={changeDaysInLetters} />
+          <XAxis dataKey="day" height={30} stroke={0} tick={{ fill: "#FFFFFF", dx: 20 }} tickFormatter={changeDaysInLetters} />
           <Tooltip wrapperStyle={{ width: 50, backgroundColor: '#fff', color: '#000000' }} content={<CustomTooltip />} cursor={<CustomHover />} />
           <Line type="monotone" dataKey="sessionLength" stroke="#fff" dot={0} />
         </LineChart>

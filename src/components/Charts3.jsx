@@ -10,7 +10,9 @@ export default function Charts3(props) {
   // kind 1
 
   
+  const kinds = { 1: "cardio", 2: "energy", 3: "endurance", 4: "strength", 5: "speed", 6: "intensity" };
 
+  const changeNumbersInKinds = (number) => kinds[number];
   
 
   
@@ -32,9 +34,9 @@ export default function Charts3(props) {
 
     return (
       <div className='charts3'>
-        <RadarChart cx={150} cy={150} outerRadius={150} width={300} height={300} data={data.data.data}>
-          <PolarGrid />
-          <PolarAngleAxis dataKey="kind" />
+        <RadarChart cx="50%" cy="50%" outerRadius="65%" width={258} height={263} data={data.data.data}>
+          <PolarGrid radialLines={false} />
+          <PolarAngleAxis dataKey="kind" stroke='#fff' tickFormatter={changeNumbersInKinds} />
           <Radar dataKey="value" fill="#FF0101" fillOpacity={0.7} />
         </RadarChart>
       </div>

@@ -35,6 +35,7 @@ export default function Dashboard() {
                         <p className='dashboard_hello'>Bonjour <b>{data.data.userInfos.firstName}</b></p>
                         <p className='dashboard_congratulations'>Félicitations ! Vous avez explosé vos objectifs hier 👏</p>
                         <Charts1 id={idFinal} />
+                        <p className='charts1_title'>Activité quotidienne</p>
                         <div className='dashboard_charts_2_3'>
                             <Charts2 id={idFinal} />
                             <Charts3 id={idFinal} />

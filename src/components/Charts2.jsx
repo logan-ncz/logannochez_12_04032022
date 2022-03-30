@@ -9,7 +9,7 @@ function CustomTooltip({ payload, active }) {
     if (active) {
       return (
         <div className="custom-tooltip2">
-          <p className="label">{`${payload[0].value}`}kg</p>
+          <p className="label">{`${payload[0].value}`}min</p>
         </div>
       )
     }

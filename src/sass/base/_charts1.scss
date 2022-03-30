@@ -12,6 +12,29 @@
     background-color: '#fff';
 }
 
+.charts1 {
+    background-color: #FBFBFB;
+    padding: 1em;
+
+    &_title {
+        position: absolute;
+        top: 42%;
+        left: 15%;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    &_legend {
+        color: #74798C;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .recharts_legend_wrapper {
+        top: 0;
+    }
+}
+
 .charts2 {
     background: #FF0000;
     width: fit-content;

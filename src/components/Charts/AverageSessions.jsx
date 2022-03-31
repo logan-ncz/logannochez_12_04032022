@@ -41,7 +41,7 @@ export default function AverageSessions(props) {
     return (
       <div className='averageSessions'>
         <LineChart
-          width={280}
+          width={258}
           height={263}
           data={data.data.sessions}
           margin={{

@@ -21,6 +21,8 @@ export default function Dashboard() {
     
     const { data, isLoading } = useFetch(`http://localhost:5500/user/${idFinal}`)
 
+    //Récuéprer les data
+
     if (!isLoading) {
         return (
             <div className="home">

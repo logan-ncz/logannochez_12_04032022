@@ -42,7 +42,7 @@ export default function Activity(props) {
           <YAxis orientation='right' stroke='0' tickMargin={20} tick={{ fill: '#9B9EAC' }} />
           <Label value="" position="insideTopLeft" />
           <Tooltip wrapperStyle={{ width: 50, backgroundColor: '#E60000', color: '#fff' }} content={<CustomTooltip />} cursor={{fill: "rgba(196, 196, 196, 0.5)"}}/>
-          <Legend verticalAlign='top' align='right' iconType='circle' iconSize={8} wrapperStyle={{top: 0}} formatter={(value, entry, index) => <span className="charts1_legend">{value}</span>} />
+          <Legend verticalAlign='top' align='right' iconType='circle' iconSize={8} wrapperStyle={{top: 0}} formatter={(value, entry, index) => <span className="activity_legend">{value}</span>} />
           <Bar dataKey="kilogram" name='Poids (kg)' fill="#282D30" radius={[20, 20, 0, 0]} barSize={10} />
           <Bar dataKey="calories" name='Calories brûlées (kCal)' fill="#E60000" radius={[20, 20, 0, 0]} barSize={10} />
         </BarChart>

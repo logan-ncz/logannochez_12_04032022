@@ -28,12 +28,32 @@
     &_nav_l {
         display: flex;
         flex-direction: column;
+        align-items: center;
         background: #020203;
         width: 8%;
+        justify-content: space-evenly;
 
-        img {
-            width: 4em;
-            margin: auto;
+        &_logos {
+            display: flex;
+            flex-direction: column;
+
+            img {
+                width: 4em;
+                margin-bottom: 1em;
+            }
+        }
+
+        &_copyright {
+            margin-top: 2em;
+
+            &_text {
+                color: #ffffff;
+                transform: rotate(-90deg);
+                font-size: 12px;
+                font-weight: 500;
+                width: 13em;
+            }
+            
         }
     }
 }

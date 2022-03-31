@@ -14,12 +14,20 @@
 
     .dashboard {
         display: flex;
+        flex-direction: column;
         width: 92%;
         padding: 1em 6em;
+        
+        &_header {
+            margin-bottom: 3em;
+        }
 
-        &_scores {
-            margin-top: 2em;
-            margin-left: 2em;
+        &_main {
+            display: flex;
+        }
+
+        &_charts {
+            margin-right: 2em;
         }
 
         &_hello {

@@ -2,7 +2,7 @@
 /* eslint-disable react/no-multi-comp */
 import React from 'react';
 import { LineChart, Line, XAxis, CartesianGrid, Tooltip, } from 'recharts';
-import { useFetch } from '../utils/Fetch'
+import { useFetch } from '../../utils/Fetch'
 
 
 function CustomTooltip({ payload, active }) {
@@ -28,7 +28,7 @@ function CustomHover({ points }) {
   )
 }
 
-export default function Charts2(props) {
+export default function AverageSessions(props) {
 
   const { data, isLoading } = useFetch(`http://localhost:5500/user/${props.id}/average-sessions`)
 
@@ -39,7 +39,7 @@ export default function Charts2(props) {
   if (!isLoading) {
 
     return (
-      <div className='charts2'>
+      <div className='averageSessions'>
         <LineChart
           width={280}
           height={263}

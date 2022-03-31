@@ -12,13 +12,14 @@
     background-color: '#fff';
 }
 
-.charts1 {
+.activity {
     background-color: #FBFBFB;
     padding: 1em;
+    width: fit-content;
 
     &_title {
         position: absolute;
-        top: 42%;
+        top: 49%;
         left: 15%;
         font-size: 15px;
         font-weight: 500;
@@ -30,25 +31,35 @@
         font-weight: 500;
     }
 
-    .recharts_legend_wrapper {
+    .recharts-legend-wrapper {
         top: 0;
     }
 }
 
-.charts2 {
+.averageSessions {
     background: #FF0000;
     width: fit-content;
+    height: fit-content;
     border-radius: 5px;
     margin-right: 2em;
 }
 
-.charts3 {
+.performance {
     background-color: #282D30;
     width: fit-content;
+    height: fit-content;
+    border-radius: 5px;
+    margin-right: 2em;
+}
+
+.score {
+    background-color: #282D30;
+    width: fit-content;
+    height: fit-content;
     border-radius: 5px;
 }
 
-.dashboard_charts_2_3 {
+.dashboard_charts_2_3_4 {
     display: flex;
     margin-top: 2em;
 }

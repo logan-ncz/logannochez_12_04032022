@@ -24,7 +24,7 @@ export default function Score(props) {
                     </Pie>
                     <Pie data={data01} dataKey="value" cx="50%" cy="50%" outerRadius={90} fill="#ffffff" />
                 </PieChart>
-                <p className='score_label_percent'>
+                <p className='score_percent'>
                     {`${data01[0].value}%`}
                 </p>
                 <p className='score_text'>de votre <br />objectif</p>

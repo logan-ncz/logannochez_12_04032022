@@ -45,7 +45,6 @@
 
         .calories, .proteins, .glucides, .lipides {
             display: flex;
-            justify-content: center;
             align-items: center;
             border-radius: 5px;
             background: #FBFBFB;
@@ -71,6 +70,7 @@
             &_text {
                 font-weight: 500;
                 font-size: 14px;
+                color: #74798C;
             }
 
             img {

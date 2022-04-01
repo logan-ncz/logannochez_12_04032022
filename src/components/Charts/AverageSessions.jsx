@@ -40,6 +40,7 @@ export default function AverageSessions(props) {
 
     return (
       <div className='averageSessions'>
+        <p className='averageSessions_title'>Durée moyenne des <br />sessions</p>
         <LineChart
           width={258}
           height={263}

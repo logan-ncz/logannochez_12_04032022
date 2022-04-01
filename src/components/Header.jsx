@@ -9,7 +9,7 @@ export default function Header() {
             <nav className='header_nav_t'>
                 <Link to={"/"}>Accueil</Link>
                 <Link to={"/"}>Profil</Link>
-                <Link to={"/"}>Réglage</Link>
+                <Link to={"/"}>Réglages</Link>
                 <Link to={"/"}>Communauté</Link>
             </nav>
         </header>

@@ -21,7 +21,7 @@
     &_title {
         position: absolute;
         top: 49%;
-        left: 15%;
+        left: 16%;
         font-size: 15px;
         font-weight: 500;
     }
@@ -43,6 +43,15 @@
     height: fit-content;
     border-radius: 5px;
     margin-right: 2.8em;
+
+    &_title {
+        position: absolute;
+        top: 104%;
+        left: 16%;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 15px;
+        font-weight: 500;
+    }
 }
 
 .performance {
@@ -67,7 +76,7 @@
         top: 104%;
     }
 
-    &_label_percent {
+    &_percent {
         position: absolute;
         top: 113%;
         right: 35.4%;
@@ -89,4 +98,33 @@
 .dashboard_charts_2_3_4 {
     display: flex;
     margin-top: 2em;
+}
+
+@media (min-width: 1900px) {
+    .activity_title {
+        top: 37.5%;
+        left: 14%;
+    }
+
+    .averageSessions_title {
+        top: 80%;
+        left: 15%;
+    }
+
+    .score {
+        &_title {
+            top: 79.5%;
+            left: 46.5%;
+        }
+
+        &_percent {
+            top: 87%;
+            right: 47%;
+        }
+
+        &_text {
+            top: 92%;
+            right: 46.85%;
+        }
+    } 
 }

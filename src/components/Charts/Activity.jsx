@@ -12,6 +12,13 @@ function CustomTooltip({ payload, active }) {
   return null;
 }
 
+/**
+ * This component render the Activity Chart
+ * 
+ * @param {*} props The props types of the component
+ * @returns Render the Chart
+ */
+
 export default function Activity(props) {
 
   const { data, isLoading } = props.data
@@ -22,7 +29,6 @@ export default function Activity(props) {
 
   if (!isLoading) {
     return (
-
       <ResponsiveContainer className='activity' width="93%" height={320}>
         <BarChart
           width={835}
@@ -46,7 +52,6 @@ export default function Activity(props) {
           <Bar dataKey="calories" name='Calories brûlées (kCal)' fill="#E60000" radius={[20, 20, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>
-
     );
   }
 

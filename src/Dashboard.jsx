@@ -19,10 +19,8 @@ import { useFetch } from './utils/Fetch'
  * @param {string} id The user id, in the form of String
  * @param {number} idFinal The user id, in the form of Number
  * @param {object} data The user's data
- * @param {boolean} isLoading
- * @param {object} activityData
- * @param {object} averageSessionsData
- * @param {object} performanceData
+ * @param {boolean} isLoading The state for render only after the data are loaded
+ * @returns Render the dashboard
  */
 
 export default function Dashboard() {
@@ -120,7 +118,5 @@ export default function Dashboard() {
 
     return (
         <div>Loading</div>
-    )
-    
-    
+    )    
 }

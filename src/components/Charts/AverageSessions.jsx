@@ -1,8 +1,5 @@
-/* eslint-disable max-classes-per-file */
-/* eslint-disable react/no-multi-comp */
 import React from 'react';
 import { LineChart, Line, XAxis, CartesianGrid, Tooltip, } from 'recharts';
-
 
 function CustomTooltip({ payload, active }) {
     if (active) {
@@ -26,6 +23,13 @@ function CustomHover({ points }) {
     />
   )
 }
+
+/**
+ * This component render the AverageSessions Chart
+ * 
+ * @param {*} props The props types of the component
+ * @returns Render the Chart
+ */
 
 export default function AverageSessions(props) {
 

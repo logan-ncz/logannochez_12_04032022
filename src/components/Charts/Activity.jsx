@@ -1,4 +1,4 @@
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Label } from 'recharts';
+import { BarChart, ResponsiveContainer, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import { useFetch } from '../../utils/Fetch'
 
 function CustomTooltip({ payload, active }) {
@@ -25,28 +25,29 @@ export default function Activity(props) {
 
     return (
 
-      <div className='activity'>
+      <ResponsiveContainer className='activity' width="93%" height={320}>
         <BarChart
           width={835}
           height={320}
           margin={{
             top: 20,
-            right: 0,
+            right: 10,
             left: 10,
             bottom: 10,
           }}
           data={data.data.sessions}
+          barCategoryGap="35%"
         >
           <CartesianGrid vertical={false} strokeDasharray="3 3" />
-          <XAxis dataKey="day" stroke='0' tickMargin={20} tick={{ fill: '#9B9EAC' }} tickFormatter={changeDateInNumbers} />
-          <YAxis orientation='right' stroke='0' tickMargin={20} tick={{ fill: '#9B9EAC' }} />
-          <Label value="" position="insideTopLeft" />
+          <XAxis dataKey="day" stroke='0' interval={0} tickMargin={20} tick={{ fill: '#9B9EAC' }} tickFormatter={changeDateInNumbers} />
+          <YAxis orientation='right' stroke='0' tickMargin={10} tick={{ fill: '#9B9EAC' }} />
           <Tooltip wrapperStyle={{ width: 50, backgroundColor: '#E60000', color: '#fff' }} content={<CustomTooltip />} cursor={{fill: "rgba(196, 196, 196, 0.5)"}}/>
-          <Legend verticalAlign='top' align='right' iconType='circle' iconSize={8} wrapperStyle={{top: 0}} formatter={(value, entry, index) => <span className="activity_legend">{value}</span>} />
-          <Bar dataKey="kilogram" name='Poids (kg)' fill="#282D30" radius={[20, 20, 0, 0]} barSize={10} />
-          <Bar dataKey="calories" name='Calories brûlées (kCal)' fill="#E60000" radius={[20, 20, 0, 0]} barSize={10} />
+          <Legend verticalAlign='top' align='right' iconType='circle' iconSize={8} wrapperStyle={{top: 0, padding: "0 1em"}} formatter={(value, entry, index) => <span className="activity_legend">{value}</span>} />
+          <Bar dataKey="kilogram" name='Poids (kg)' fill="#282D30" radius={[20, 20, 0, 0]} />
+          <Bar fill='none' />
+          <Bar dataKey="calories" name='Calories brûlées (kCal)' fill="#E60000" radius={[20, 20, 0, 0]} />
         </BarChart>
-      </div>
+      </ResponsiveContainer>
 
     );
 

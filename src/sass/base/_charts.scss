@@ -144,4 +144,28 @@
             left: 14%;
         }
     }
+
+    .averageSessions_title {
+        top: 95%;
+        left: 14%;
+    }
+
+    .score {
+        &_title {
+            top: 95%;
+            left: 71%;
+        }
+
+        &_percent {
+            top: 103%;
+            right: 17.4%;
+        }
+
+        &_text {
+            top: 109%;
+            right: 17.2%;
+        }
+    }
+
+    
 }

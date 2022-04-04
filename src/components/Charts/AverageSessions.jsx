@@ -2,7 +2,6 @@
 /* eslint-disable react/no-multi-comp */
 import React from 'react';
 import { LineChart, Line, XAxis, CartesianGrid, Tooltip, } from 'recharts';
-import { useFetch } from '../../utils/Fetch'
 
 
 function CustomTooltip({ payload, active }) {
@@ -30,7 +29,7 @@ function CustomHover({ points }) {
 
 export default function AverageSessions(props) {
 
-  const { data, isLoading } = useFetch(`http://localhost:5500/user/${props.id}/average-sessions`)
+  const { data, isLoading } = props.data
 
   const dayOfWeek = { 1: "L", 2: "M", 3: "M", 4: "J", 5: "V", 6: "S", 7: "D" };
 

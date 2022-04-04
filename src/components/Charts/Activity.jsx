@@ -1,5 +1,4 @@
 import { BarChart, ResponsiveContainer, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
-import { useFetch } from '../../utils/Fetch'
 
 function CustomTooltip({ payload, active }) {
   if (active) {
@@ -15,14 +14,13 @@ function CustomTooltip({ payload, active }) {
 
 export default function Activity(props) {
 
-  const { data, isLoading } = useFetch(`http://localhost:5500/user/${props.id}/activity`)
+  const { data, isLoading } = props.data
 
   const numbers = { '2020-07-01': "1", '2020-07-02': "2", '2020-07-03': "3", '2020-07-04': "4", '2020-07-05': "5", '2020-07-06': "6", '2020-07-07': "7" };
 
   const changeDateInNumbers = (date) => numbers[date];
 
   if (!isLoading) {
-
     return (
 
       <ResponsiveContainer className='activity' width="93%" height={320}>
@@ -50,7 +48,6 @@ export default function Activity(props) {
       </ResponsiveContainer>
 
     );
-
   }
 
   return (

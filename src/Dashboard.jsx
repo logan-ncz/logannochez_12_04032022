@@ -13,6 +13,18 @@ import Apple from './assets/apple.svg'
 import Cheeseburger from './assets/cheeseburger.svg'
 import { useFetch } from './utils/Fetch'
 
+/**
+ * This component call the Fetch fonction to retrieves the data, then render the user's Dashboard with the differents charts.
+ * 
+ * @param {string} id The user id, in the form of String
+ * @param {number} idFinal The user id, in the form of Number
+ * @param {object} data The user's data
+ * @param {boolean} isLoading
+ * @param {object} activityData
+ * @param {object} averageSessionsData
+ * @param {object} performanceData
+ */
+
 export default function Dashboard() {
     
     const { id } = useParams()
@@ -21,7 +33,13 @@ export default function Dashboard() {
     
     const { data, isLoading } = useFetch(`http://localhost:5500/user/${idFinal}`)
 
-    //Récuéprer les data
+    const activityData = useFetch(`http://localhost:5500/user/${idFinal}/activity`)
+
+    const averageSessionsData = useFetch(`http://localhost:5500/user/${idFinal}/average-sessions`)
+
+    const performanceData = useFetch(`http://localhost:5500/user/${idFinal}/performance`)
+
+    //Récupérer les data
 
     if (!isLoading) {
         return (
@@ -47,12 +65,12 @@ export default function Dashboard() {
                     <div className="dashboard_main">
                         <div className='dashboard_charts'>
                             
-                            <Activity id={idFinal} />
+                            <Activity data={activityData} />
                             <p className='activity_title'>Activité quotidienne</p>
                             <div className='dashboard_charts_2_3_4'>
-                                <AverageSessions id={idFinal} />
-                                <Performance id={idFinal} />
-                                <Score id={idFinal} />
+                                <AverageSessions data={averageSessionsData} />
+                                <Performance data={performanceData} />
+                                <Score data={data} loading={isLoading}/>
                             </div>
                             
                         </div>

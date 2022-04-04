@@ -1,11 +1,11 @@
 import React from 'react';
 import { PieChart, Pie, Cell } from 'recharts';
-import { useFetch } from '../../utils/Fetch'
 
 
 export default function Score(props) {
 
-    const { data, isLoading } = useFetch(`http://localhost:5500/user/${props.id}`)
+    const data = props.data
+    const isLoading = props.loading
 
     if (!isLoading) {
 

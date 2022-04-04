@@ -1,10 +1,9 @@
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis } from 'recharts';
-import { useFetch } from '../../utils/Fetch'
 
 
 export default function Performance(props) {
 
-  const { data, isLoading } = useFetch(`http://localhost:5500/user/${props.id}/performance`)
+  const { data, isLoading } = props.data
 
   //Code pour map les numero avec les titre (Tranformer l'objet)
   // kind 1

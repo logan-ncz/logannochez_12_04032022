@@ -8,17 +8,13 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis } from 'recharts';
  */
 
 export default function Performance(props) {
-
   const { data, isLoading } = props.data
 
-  //Code pour map les numero avec les titre (Tranformer l'objet)
-  // kind 1
-
   const dataKind = data.data && data.data.kind;
+
   const formattedKind = (type) => dataKind && dataKind[type];
 
   if (!isLoading) {
-
     return (
       <div className='performance'>
         <RadarChart cx="48%" cy="50%" outerRadius="65%" width={258} height={263} data={data.data.data}>

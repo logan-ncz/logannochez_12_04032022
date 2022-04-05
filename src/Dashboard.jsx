@@ -20,7 +20,6 @@ import { useFetch } from './utils/Fetch'
  */
 
 export default function Dashboard() {
-    
     const { id } = useParams()
 
     const idFinal = Number(id)
@@ -32,8 +31,6 @@ export default function Dashboard() {
     const averageSessionsData = useFetch(`http://localhost:5500/user/${idFinal}/average-sessions`)
 
     const performanceData = useFetch(`http://localhost:5500/user/${idFinal}/performance`)
-
-    //Récupérer les data
 
     if (!isLoading) {
         return (
@@ -49,7 +46,6 @@ export default function Dashboard() {
                     <div className='header_nav_l_copyright'>
                         <p className='header_nav_l_copyright_text'>Copyright, SportSee 2020</p>
                     </div>
-                    
                 </nav>
                 <div className='dashboard'>
                     <div className="dashboard_header">
@@ -58,7 +54,6 @@ export default function Dashboard() {
                     </div>
                     <div className="dashboard_main">
                         <div className='dashboard_charts'>
-                            
                             <Activity data={activityData} />
                             <p className='activity_title'>Activité quotidienne</p>
                             <div className='dashboard_charts_2_3_4'>
@@ -66,7 +61,6 @@ export default function Dashboard() {
                                 <Performance data={performanceData} />
                                 <Score data={data} loading={isLoading}/>
                             </div>
-                            
                         </div>
                         <div className='dashboard_scores'>
                             <div className='calories'>

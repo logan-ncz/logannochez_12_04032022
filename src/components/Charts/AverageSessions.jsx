@@ -2,14 +2,14 @@ import React from 'react';
 import { LineChart, Line, XAxis, CartesianGrid, Tooltip, } from 'recharts';
 
 function CustomTooltip({ payload, active }) {
-    if (active) {
-      return (
-        <div className="custom-tooltip2">
-          <p className="label">{`${payload[0].value}`}min</p>
-        </div>
-      )
-    }
-    return null;
+  if (active) {
+    return (
+      <div className="custom-tooltip2">
+        <p className="label">{`${payload[0].value}`}min</p>
+      </div>
+    )
+  }
+  return null;
 }
 
 function CustomHover({ points }) {
@@ -32,7 +32,6 @@ function CustomHover({ points }) {
  */
 
 export default function AverageSessions(props) {
-
   const { data, isLoading } = props.data
 
   const dayOfWeek = { 1: "L", 2: "M", 3: "M", 4: "J", 5: "V", 6: "S", 7: "D" };
@@ -40,7 +39,6 @@ export default function AverageSessions(props) {
   const changeDaysInLetters = (day) => dayOfWeek[day];
 
   if (!isLoading) {
-
     return (
       <div className='averageSessions'>
         <p className='averageSessions_title'>Durée moyenne des <br />sessions</p>

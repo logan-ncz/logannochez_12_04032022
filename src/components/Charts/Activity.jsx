@@ -20,7 +20,6 @@ function CustomTooltip({ payload, active }) {
  */
 
 export default function Activity(props) {
-
   const { data, isLoading } = props.data
 
   const numbers = { '2020-07-01': "1", '2020-07-02': "2", '2020-07-03': "3", '2020-07-04': "4", '2020-07-05': "5", '2020-07-06': "6", '2020-07-07': "7" };
@@ -58,5 +57,4 @@ export default function Activity(props) {
   return (
     <div>Loading</div>
   )
-  
 }

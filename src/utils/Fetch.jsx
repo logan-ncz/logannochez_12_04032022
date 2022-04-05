@@ -4,9 +4,7 @@ import { useEffect, useState } from 'react';
  * This function makes API calls for retrieves the data
  * 
  * @param {*} url The url for fetch the data 
- * @param {Object} data The state for retrieve the data
- * @param {boolean} isLoading The state to know if the data are loaded or not, to render that 
- * @returns {Object} Return the data and the state isLoading to render only after the data are loaded
+ * @returns {} Return the data and the state isLoading to render only after the data are loaded
  */
 
 export function useFetch(url) {

@@ -1,6 +1,13 @@
 import { USER_MAIN_DATA } from "./mockData/data"
 import { Link } from "react-router-dom"
 
+/**
+ * This component render the Connection page, to select the user
+ * 
+ * @param {} users The users
+ * @returns 
+ */
+
 export default function Connection() {
     const users = USER_MAIN_DATA
     

@@ -16,10 +16,6 @@ import { useFetch } from './utils/Fetch'
 /**
  * This component call the Fetch fonction to retrieves the data, then render the user's Dashboard with the differents charts.
  * 
- * @param {string} id The user id, in the form of String
- * @param {number} idFinal The user id, in the form of Number
- * @param {object} data The user's data
- * @param {boolean} isLoading The state for render only after the data are loaded
  * @returns Render the dashboard
  */
 

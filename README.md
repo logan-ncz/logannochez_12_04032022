@@ -1,27 +1,52 @@
-# Getting Started with Create React App
+# SportSee - Juillet 2021
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Code source du **Projet 12** - **_Développez un tableau de bord d'analytics avec React_** du parcours **Développeur Front-end** d'_OpenClassrooms_.
 
-## Available Scripts
+## Installation
 
-In the root directory, you can run:
+### Prerequisites
 
-### Launch API back-end in first : `npm run dev`
+- [NodeJS (**version 12.18**)](https://nodejs.org/en/)
+- [npm](https://www.npmjs.com/)
 
-Runs the API in the back-end directory.\
-Open terminal and copy paste in the terminal :
+### Installing and launching back-end
+
+Clone the repository of _SportSee_ back-end:
+
+`git clone https://github.com/logan-ncz/logannochez_12_04032022`
+
+Go to back-end directory:
+
 `cd back-end`
-`npm run dev`\
-It should render the raw data in your browser.\
-Open [http://localhost:5500/user/:id](http://localhost:5500/user/:id) to view it in your browser.
 
-### Then Launch front-end : `npm start`
+Inside this back-end directory, install dependencies:
 
-Runs the app in the front-end directory.\
-Open terminal and copy paste in your terminal :
+`npm install`
+
+Launch back-end on port 5500 (custom port):
+
+`npm run dev`
+
+### Installing and launching front-end
+
+Clone the repository of _SportSee_ if it's not already did:
+
+`git clone https://github.com/logan-ncz/logannochez_12_04032022`
+
+Go to front-end directory:
+
 `cd front-end`
-`npm start`\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.\
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Inside this front-end directory, install dependencies:
+
+`npm install`
+
+Launch front-end on port 3000 (default port):
+
+`npm start`
+
+Front-end is now rendered at URL `http://localhost:3000`.
+
+### N.B.:
+
+- _SportSee_ API only contains data for users with id 12 and 18.

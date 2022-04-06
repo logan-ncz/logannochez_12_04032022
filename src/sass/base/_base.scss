@@ -55,7 +55,7 @@
             font-size: 18px;
         }
 
-        .calories, .proteins, .glucides, .lipides {
+        .calories, .carbohydrates, .proteins, .lipids {
             display: flex;
             align-items: center;
             border-radius: 5px;
@@ -94,15 +94,15 @@
             background: rgba(255, 100, 100, 0.07);
         }
 
-        .proteins_logo {
+        .carbohydrates_logo {
             background: rgba(74, 184, 255, 0.07);
         }
 
-        .glucides_logo {
+        .proteins_logo {
             background: rgba(253, 204, 12, 0.07);
         }
 
-        .lipides_logo {
+        .lipids_logo {
             background: rgba(253, 81, 129, 0.07);
         }
     }
@@ -128,7 +128,7 @@
         .dashboard_scores {
             display: flex;
 
-            .calories, .proteins, .glucides, .lipides {
+            .calories, .proteins, .carbohydrates, .lipids {
                 padding: 1.75em;
                 margin-bottom: 0;
                 margin: 2em 1em 0 0 ;

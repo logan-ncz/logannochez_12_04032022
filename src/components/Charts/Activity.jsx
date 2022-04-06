@@ -1,4 +1,13 @@
-import { BarChart, ResponsiveContainer, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import {
+  BarChart,
+  ResponsiveContainer,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+} from "recharts";
 
 function CustomTooltip({ payload, active }) {
   if (active) {
@@ -13,10 +22,10 @@ function CustomTooltip({ payload, active }) {
 }
 
 /**
- * This component render the Activity Chart
+ * Component used to render the Activity Chart
  * 
- * @param {*} props The props types of the component
- * @returns Render the Chart
+ * @param {*} props
+ * @returns {}
  */
 
 export default function Activity(props) {

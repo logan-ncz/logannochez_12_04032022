@@ -1,5 +1,5 @@
 import AsideNav from './components/AsideNav'
-import InfoCard from './components/infoCard'
+import InfoCard from './components/InfoCard'
 import Activity from './components/Charts/Activity'
 import AverageSessions from './components/Charts/AverageSessions'
 import Performance from './components/Charts/Performance'

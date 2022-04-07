@@ -2,10 +2,10 @@ import React from 'react';
 import { PieChart, Pie, Cell } from 'recharts';
 
 /**
- * This component render the Score Chart
+ * Component used to render the Score Chart
  * 
- * @param {*} props The props types of the component
- * @returns Render the Chart
+ * @param {*} props
+ * @returns {*}
  */
 
 export default function Score(props) {

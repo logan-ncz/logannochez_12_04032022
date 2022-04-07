@@ -10,7 +10,7 @@ import { useSportSeeAPI } from './utils/useSportSeeAPI'
 /**
  * Component used to call the Fetch fonction to retrieves the data, then render the user's Dashboard with the differents charts.
  * 
- * @returns Render the dashboard
+ * @returns {*}
  */
 
 export default function Dashboard() {
@@ -38,7 +38,6 @@ export default function Dashboard() {
                     <div className="dashboard_main">
                         <div className='dashboard_charts'>
                             <Activity data={activityData} />
-                            <p className='activity_title'>Activité quotidienne</p>
                             <div className='dashboard_charts_2_3_4'>
                                 <AverageSessions data={averageSessionsData} />
                                 <Performance data={performanceData} />

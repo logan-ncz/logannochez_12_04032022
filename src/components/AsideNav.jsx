@@ -3,6 +3,12 @@ import Cycling from '../assets/cycling.svg'
 import Meditation from '../assets/meditation.svg'
 import Swimming from '../assets/swimming.svg'
 
+/**
+ * Component used to render the Aside nav
+ * 
+ * @returns {*}
+ */
+
 export default function AsideNav() {
     return (
         <aside className='header_nav_l'>

@@ -4,8 +4,7 @@ import { Link } from "react-router-dom"
 /**
  * This component render the Connection page, to select the user
  * 
- * @param {} users The users
- * @returns 
+ * @returns {*}
  */
 
 export default function Connection() {

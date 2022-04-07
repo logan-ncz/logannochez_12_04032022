@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
  * 
  * @param {string} service
  * @param {number} userId
- * @returns {}
+ * @returns {undefined|Object} State isLoading, and the data
  */
 
 export function useSportSeeAPI(service, userId) {

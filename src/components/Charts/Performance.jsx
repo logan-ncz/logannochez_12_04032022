@@ -1,10 +1,10 @@
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis } from 'recharts';
 
 /**
- * This component render the Performance Chart
+ * Component used to render the Performance Chart
  * 
- * @param {*} props The props types of the component
- * @returns Render the Chart
+ * @param {*} props
+ * @returns {*}
  */
 
 export default function Performance(props) {

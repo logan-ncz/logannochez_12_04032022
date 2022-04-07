@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import calorieIcon from '../assets/energy.svg'
 import carbohydrateIcon from '../assets/chicken.svg'
 import proteinIcon from '../assets/apple.svg'
@@ -24,6 +25,12 @@ const NAME_BY_TYPE = {
     lipids: "Lipides",
 };
 
+/**
+ * 
+ * @param {*} props 
+ * @returns {*}
+ */
+
 export default function InfoCard({ type, value }) {
     return (
         <div className={type}>
@@ -38,3 +45,7 @@ export default function InfoCard({ type, value }) {
     )
 }
 
+InfoCard.propTypes = {
+    type: PropTypes.string.isRequired,
+    value: PropTypes.number.isRequired,
+};

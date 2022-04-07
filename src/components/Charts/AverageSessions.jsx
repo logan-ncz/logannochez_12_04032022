@@ -25,10 +25,10 @@ function CustomHover({ points }) {
 }
 
 /**
- * This component render the AverageSessions Chart
+ * Component used to render the AverageSessions Chart
  * 
- * @param {*} props The props types of the component
- * @returns Render the Chart
+ * @param {*} props
+ * @returns {*}
  */
 
 export default function AverageSessions(props) {

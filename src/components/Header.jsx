@@ -1,6 +1,11 @@
 import Logo from '../assets/logo.png'
 import { Link } from 'react-router-dom'
 
+/**
+ * Component used to render the Header
+ * 
+ * @returns {*}
+ */
 
 export default function Header() {
     return (

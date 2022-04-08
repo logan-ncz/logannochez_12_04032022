@@ -41,6 +41,8 @@ export function useSportSeeAPI(service, userId) {
 }
 
 /**
+ * Function used to get endpoint to call SportSeeAPI
+ * 
  * @param {string} service 
  * @param {string} userId 
  * @returns {string} endpoint associated to the service and id
@@ -57,7 +59,7 @@ function getEndpointByService(service, userId) {
     case "performance":
       return `user/${userId}/performance`;
 
-    case "key-data":
+    case "data":
       return `user/${userId}`;
 
     default:

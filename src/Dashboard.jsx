@@ -10,15 +10,17 @@ import { useSportSeeAPI } from './utils/useSportSeeAPI'
 /**
  * Component used to call the Fetch fonction to retrieves the data, then render the user's Dashboard with the differents charts.
  * 
- * @returns {*}
+ * @component
+ * 
+ * @returns {}
  */
 
-export default function Dashboard() {
+function Dashboard() {
     const { id } = useParams()
 
     const idFinal = Number(id)
 
-    const { data, isLoading } = useSportSeeAPI("key-data", idFinal)
+    const { data, isLoading } = useSportSeeAPI("data", idFinal)
 
     const activityData = useSportSeeAPI("activity", idFinal)
 
@@ -60,3 +62,5 @@ export default function Dashboard() {
         <div>Loading</div>
     )    
 }
+
+export default Dashboard

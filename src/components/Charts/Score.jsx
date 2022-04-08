@@ -4,11 +4,13 @@ import { PieChart, Pie, Cell } from 'recharts';
 /**
  * Component used to render the Score Chart
  * 
- * @param {*} props
- * @returns {*}
+ * @component
+ * 
+ * @param {*} props The data fed by dashboard
+ * @returns {}
  */
 
-export default function Score(props) {
+function Score(props) {
     const data = props.data
 
     const isLoading = props.loading
@@ -41,3 +43,5 @@ export default function Score(props) {
         <div>Loading</div>
     )
 }
+
+export default Score

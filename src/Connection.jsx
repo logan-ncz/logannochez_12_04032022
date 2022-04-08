@@ -4,10 +4,12 @@ import { Link } from "react-router-dom"
 /**
  * This component render the Connection page, to select the user
  * 
- * @returns {*}
+ * @component
+ * 
+ * @returns {}
  */
 
-export default function Connection() {
+function Connection() {
     const users = USER_MAIN_DATA
     
     return (
@@ -20,3 +22,5 @@ export default function Connection() {
         </div>
     )
 }
+
+export default Connection

@@ -3,11 +3,13 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis } from 'recharts';
 /**
  * Component used to render the Performance Chart
  * 
- * @param {*} props
- * @returns {*}
+ * @component
+ * 
+ * @param {*} props The data fed by dashboard
+ * @returns {}
  */
 
-export default function Performance(props) {
+function Performance(props) {
   const { data, isLoading } = props.data
 
   const dataKind = data.data && data.data.kind;
@@ -30,3 +32,5 @@ export default function Performance(props) {
     <div>Loading</div>
   )
 }
+
+export default Performance

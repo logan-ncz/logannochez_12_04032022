@@ -4,10 +4,12 @@ import { Link } from 'react-router-dom'
 /**
  * Component used to render the Header
  * 
- * @returns {*}
+ * @component
+ * 
+ * @returns {}
  */
 
-export default function Header() {
+function Header() {
     return (
         <header className="header">
             <img src={Logo} alt='' />
@@ -20,3 +22,5 @@ export default function Header() {
         </header>
     )
 }
+
+export default Header

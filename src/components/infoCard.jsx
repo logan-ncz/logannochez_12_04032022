@@ -26,12 +26,16 @@ const NAME_BY_TYPE = {
 };
 
 /**
+ * Component used to render the InfoCard of macronutrients
  * 
- * @param {*} props 
- * @returns {*}
+ * @component
+ * 
+ * @param {string} type The type of macronutrient
+ * @param {number} value The value of macronutrient
+ * @returns {}
  */
 
-export default function InfoCard({ type, value }) {
+function InfoCard({ type, value }) {
     return (
         <div className={type}>
             <div className={type + '_logo'}>
@@ -44,6 +48,8 @@ export default function InfoCard({ type, value }) {
         </div>
     )
 }
+
+export default InfoCard
 
 InfoCard.propTypes = {
     type: PropTypes.string.isRequired,

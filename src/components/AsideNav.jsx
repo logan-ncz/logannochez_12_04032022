@@ -6,10 +6,12 @@ import Swimming from '../assets/swimming.svg'
 /**
  * Component used to render the Aside nav
  * 
- * @returns {*}
+ * @component
+ * 
+ * @returns {}
  */
 
-export default function AsideNav() {
+function AsideNav() {
     return (
         <aside className='header_nav_l'>
             <div className='header_nav_l_logos'>
@@ -25,3 +27,5 @@ export default function AsideNav() {
         </aside>
     )
 }
+
+export default AsideNav

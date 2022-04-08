@@ -27,11 +27,13 @@ function CustomHover({ points }) {
 /**
  * Component used to render the AverageSessions Chart
  * 
- * @param {*} props
- * @returns {*}
+ * @component
+ * 
+ * @param {*} props The data fed by dashboard
+ * @returns {}
  */
 
-export default function AverageSessions(props) {
+function AverageSessions(props) {
   const { data, isLoading } = props.data
 
   const dayOfWeek = { 1: "L", 2: "M", 3: "M", 4: "J", 5: "V", 6: "S", 7: "D" };
@@ -66,3 +68,5 @@ export default function AverageSessions(props) {
     <div>Loading</div>
   )
 }
+
+export default AverageSessions

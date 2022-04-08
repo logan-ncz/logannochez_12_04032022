@@ -24,11 +24,13 @@ function CustomTooltip({ payload, active }) {
 /**
  * Component used to render the Activity Chart
  * 
- * @param {*} props
- * @returns {*}
+ * @component
+ * 
+ * @param {*} props The data fed by dashboard
+ * @returns {}
  */
 
-export default function Activity(props) {
+function Activity(props) {
   const { data, isLoading } = props.data
 
   const numbers = { '2020-07-01': "1", '2020-07-02': "2", '2020-07-03': "3", '2020-07-04': "4", '2020-07-05': "5", '2020-07-06': "6", '2020-07-07': "7" };
@@ -70,3 +72,5 @@ export default function Activity(props) {
     <div>Loading</div>
   )
 }
+
+export default Activity

@@ -30,8 +30,6 @@ function Dashboard() {
 
     // const activityData = MockedAPI("activity", idFinal)
 
-    // console.log(activityData)
-
     // const averageSessionsData = MockedAPI("average-sessions", idFinal)
 
     // const performanceData = MockedAPI("performance", idFinal)

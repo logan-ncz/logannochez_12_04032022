@@ -1,4 +1,4 @@
-import { USER_MAIN_DATA } from "./mockData/data"
+import { USER_MAIN_DATA } from "../utils/mock/mockedData"
 import { Link } from "react-router-dom"
 
 /**

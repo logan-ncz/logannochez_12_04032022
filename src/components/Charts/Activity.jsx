@@ -31,7 +31,9 @@ function CustomTooltip({ payload, active }) {
  */
 
 function Activity(props) {
-  const { data, isLoading } = props.data
+  const data = props.data
+
+  const isLoading = props.loading
 
   const numbers = { '2020-07-01': "1", '2020-07-02': "2", '2020-07-03': "3", '2020-07-04': "4", '2020-07-05': "5", '2020-07-06': "6", '2020-07-07': "7" };
 
@@ -51,7 +53,7 @@ function Activity(props) {
               left: 10,
               bottom: 10,
             }}
-            data={data.data.sessions}
+            data={data.sessions}
             barCategoryGap="35%"
           >
             <CartesianGrid vertical={false} strokeDasharray="3 3" />

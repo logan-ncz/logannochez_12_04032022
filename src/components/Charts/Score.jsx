@@ -17,8 +17,8 @@ function Score(props) {
 
     if (!isLoading) {
         const data01 = [
-            { name: 'Group A', value: data.data.score * 100 },
-            { name: 'Group B', value: 100 - data.data.score }
+            { name: 'Group A', value: data.score * 100 },
+            { name: 'Group B', value: 100 - data.score }
         ];
 
         return (

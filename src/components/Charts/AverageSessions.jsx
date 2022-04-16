@@ -34,7 +34,9 @@ function CustomHover({ points }) {
  */
 
 function AverageSessions(props) {
-  const { data, isLoading } = props.data
+  const data = props.data
+
+  const isLoading = props.loading
 
   const dayOfWeek = { 1: "L", 2: "M", 3: "M", 4: "J", 5: "V", 6: "S", 7: "D" };
 
@@ -47,7 +49,7 @@ function AverageSessions(props) {
         <LineChart
           width={258}
           height={263}
-          data={data.data.sessions}
+          data={data.sessions}
           margin={{
             top: 20,
             right: 10,

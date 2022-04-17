@@ -228,7 +228,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="utils_useSportSeeAPI.jsx.html">utils/useSportSeeAPI.jsx</a>, <a href="utils_useSportSeeAPI.jsx.html#line51">line 51</a>
+        <a href="utils_hooks_useSportSeeAPI.jsx.html">utils/hooks/useSportSeeAPI.jsx</a>, <a href="utils_hooks_useSportSeeAPI.jsx.html#line51">line 51</a>
     </li></ul></dd>
     
 
@@ -286,7 +286,7 @@
     
 
     
-    <h4 class="name" id="useSportSeeAPI"><span class="type-signature"></span>useSportSeeAPI<span class="signature">(service, userId)</span><span class="type-signature"> &rarr; {undefined|Object}</span></h4>
+    <h4 class="name" id="getMockedEndpointByService"><span class="type-signature"></span>getMockedEndpointByService<span class="signature">(service, userId)</span><span class="type-signature"> &rarr; {string}</span></h4>
     
 
     
@@ -294,7 +294,189 @@
 
 
 <div class="description">
-    <p>Hook used to extract from SportSeeAPI to feed the dashboard.</p>
+    <p>Function used to get endpoint to call MockedAPI</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>service</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>userId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="utils_mock_mockedAPI.jsx.html">utils/mock/mockedAPI.jsx</a>, <a href="utils_mock_mockedAPI.jsx.html#line54">line 54</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>endpoint associated to the service and id</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="MockedAPI"><span class="type-signature"></span>MockedAPI<span class="signature">(service, userId)</span><span class="type-signature"> &rarr; {undefined|Object}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Custom Hook used to simulate an API to extract the data from mockedData to feed the dashboard.</p>
 </div>
 
 
@@ -410,7 +592,192 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="utils_useSportSeeAPI.jsx.html">utils/useSportSeeAPI.jsx</a>, <a href="utils_useSportSeeAPI.jsx.html#line11">line 11</a>
+        <a href="utils_mock_mockedAPI.jsx.html">utils/mock/mockedAPI.jsx</a>, <a href="utils_mock_mockedAPI.jsx.html#line12">line 12</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>State isLoading, and the data</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">undefined</span>
+|
+
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="UseSportSeeAPI"><span class="type-signature"></span>UseSportSeeAPI<span class="signature">(service, userId)</span><span class="type-signature"> &rarr; {undefined|Object}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Custom Hook used to extract the data from SportSeeAPI to feed the dashboard.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>service</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>userId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="utils_hooks_useSportSeeAPI.jsx.html">utils/hooks/useSportSeeAPI.jsx</a>, <a href="utils_hooks_useSportSeeAPI.jsx.html#line11">line 11</a>
     </li></ul></dd>
     
 
@@ -481,13 +848,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Activity.html">Activity</a></li><li><a href="AsideNav.html">AsideNav</a></li><li><a href="AverageSessions.html">AverageSessions</a></li><li><a href="Connection.html">Connection</a></li><li><a href="Dashboard.html">Dashboard</a></li><li><a href="Header.html">Header</a></li><li><a href="InfoCard.html">InfoCard</a></li><li><a href="Performance.html">Performance</a></li><li><a href="Score.html">Score</a></li></ul><h3>Global</h3><ul><li><a href="global.html#getEndpointByService">getEndpointByService</a></li><li><a href="global.html#useSportSeeAPI">useSportSeeAPI</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Activity.html">Activity</a></li><li><a href="AsideNav.html">AsideNav</a></li><li><a href="AverageSessions.html">AverageSessions</a></li><li><a href="Connection.html">Connection</a></li><li><a href="Dashboard.html">Dashboard</a></li><li><a href="Header.html">Header</a></li><li><a href="InfoCard.html">InfoCard</a></li><li><a href="Performance.html">Performance</a></li><li><a href="Score.html">Score</a></li></ul><h3>Global</h3><ul><li><a href="global.html#getEndpointByService">getEndpointByService</a></li><li><a href="global.html#getMockedEndpointByService">getMockedEndpointByService</a></li><li><a href="global.html#MockedAPI">MockedAPI</a></li><li><a href="global.html#UseSportSeeAPI">UseSportSeeAPI</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Fri Apr 08 2022 16:29:05 GMT+0200 (heure d’été d’Europe centrale)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Sun Apr 17 2022 02:25:50 GMT+0200 (heure d’été d’Europe centrale)
 </footer>
 
 <script> prettyPrint(); </script>

@@ -34,8 +34,6 @@ function Dashboard() {
 
     const performanceData = mockedData ? MockedAPI("performance", idFinal) : UseSportSeeAPI("performance", idFinal)
 
-    
-
     if (!isLoading) {
         return (
             <div className="home">

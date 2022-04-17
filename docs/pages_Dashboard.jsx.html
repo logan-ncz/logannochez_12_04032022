@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: pages/Dashboard.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: pages/Dashboard.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import AsideNav from '../components/AsideNav'
+import InfoCard from '../components/InfoCard'
+import Activity from '../components/Charts/Activity'
+import AverageSessions from '../components/Charts/AverageSessions'
+import Performance from '../components/Charts/Performance'
+import Score from '../components/Charts/Score'
+import { useParams } from 'react-router-dom'
+import { UseSportSeeAPI } from '../utils/hooks/useSportSeeAPI'
+import { MockedAPI } from '../utils/mock/mockedAPI'
+
+/**
+ * Component used to call the Fetch fonction to retrieves the data, then render the user's Dashboard with the differents charts.
+ * 
+ * @component
+ * 
+ * @returns {}
+ */
+
+function Dashboard() {
+    const { id } = useParams()
+
+    const idFinal = Number(id)
+
+    //Switch on false for UseSportSeeAPI or true for MockedAPI
+    const mockedData = true
+
+    const { data, isLoading } = mockedData ? MockedAPI("data", idFinal) : UseSportSeeAPI("data", idFinal)
+
+    const finalData = mockedData ? data[0] : data.data
+
+    const activityData = mockedData ? MockedAPI("activity", idFinal) : UseSportSeeAPI("activity", idFinal)
+
+    const averageSessionsData = mockedData ? MockedAPI("average-sessions", idFinal) : UseSportSeeAPI("average-sessions", idFinal)
+
+    const performanceData = mockedData ? MockedAPI("performance", idFinal) : UseSportSeeAPI("performance", idFinal)
+
+    if (!isLoading) {
+        return (
+            &lt;div className="home">
+                &lt;AsideNav />
+                &lt;div className='dashboard'>
+                    &lt;div className="dashboard_header">
+                        &lt;p className='dashboard_hello'>Bonjour &lt;b>{finalData.userInfos.firstName}&lt;/b>&lt;/p>
+                        &lt;p className='dashboard_congratulations'>Félicitations ! Vous avez explosé vos objectifs hier 👏&lt;/p>
+                    &lt;/div>
+                    &lt;div className="dashboard_main">
+                        &lt;div className='dashboard_charts'>
+                            {mockedData ? &lt;Activity data={activityData.data[0]} loading={activityData.isLoading} /> : &lt;Activity data={activityData.data.data} loading={activityData.isLoading} />}
+                            &lt;div className='dashboard_charts_2_3_4'>
+                                {mockedData ? &lt;AverageSessions data={averageSessionsData.data[0]} loading={averageSessionsData.isLoading} /> : &lt;AverageSessions data={averageSessionsData.data.data} loading={averageSessionsData.isLoading} />}
+                                {mockedData ? &lt;Performance data={performanceData.data[0]} loading={performanceData.isLoading} /> : &lt;Performance data={performanceData.data.data} loading={performanceData.isLoading} />}
+                                &lt;Score data={finalData} loading={isLoading}/>
+                            &lt;/div>
+                        &lt;/div>
+                        &lt;div className='dashboard_scores'>
+                            &lt;InfoCard type="calories" value={finalData.keyData.calorieCount} />
+                            &lt;InfoCard type="proteins" value={finalData.keyData.proteinCount} />
+                            &lt;InfoCard type="carbohydrates" value={finalData.keyData.carbohydrateCount} />
+                            &lt;InfoCard type="lipids" value={finalData.keyData.lipidCount} />
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/div>
+            &lt;/div>
+        )
+    }
+
+    return (
+        &lt;div>Loading&lt;/div>
+    )    
+}
+
+export default Dashboard</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Activity.html">Activity</a></li><li><a href="AsideNav.html">AsideNav</a></li><li><a href="AverageSessions.html">AverageSessions</a></li><li><a href="Connection.html">Connection</a></li><li><a href="Dashboard.html">Dashboard</a></li><li><a href="Header.html">Header</a></li><li><a href="InfoCard.html">InfoCard</a></li><li><a href="Performance.html">Performance</a></li><li><a href="Score.html">Score</a></li></ul><h3>Global</h3><ul><li><a href="global.html#getEndpointByService">getEndpointByService</a></li><li><a href="global.html#getMockedEndpointByService">getMockedEndpointByService</a></li><li><a href="global.html#MockedAPI">MockedAPI</a></li><li><a href="global.html#UseSportSeeAPI">UseSportSeeAPI</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Sun Apr 17 2022 02:25:50 GMT+0200 (heure d’été d’Europe centrale)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

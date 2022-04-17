@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 /**
- * Hook used to extract from SportSeeAPI to feed the dashboard.
+ * Custom Hook used to extract the data from SportSeeAPI to feed the dashboard.
  * 
  * @param {string} service
  * @param {number} userId

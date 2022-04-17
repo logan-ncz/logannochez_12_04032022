@@ -22,7 +22,7 @@ function Dashboard() {
     const idFinal = Number(id)
 
     //Switch on false for UseSportSeeAPI or true for MockedAPI
-    const mockedData = true
+    const mockedData = false
 
     const { data, isLoading } = mockedData ? MockedAPI("data", idFinal) : UseSportSeeAPI("data", idFinal)
 

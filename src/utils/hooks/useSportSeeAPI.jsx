@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
  * @returns {undefined|Object} State isLoading, and the data
  */
 
-export function useSportSeeAPI(service, userId) {
+export function UseSportSeeAPI(service, userId) {
   const baseUrl = "http://localhost:5500"
 
   const [data, setData] = useState({})

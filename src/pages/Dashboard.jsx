@@ -5,7 +5,7 @@ import AverageSessions from '../components/Charts/AverageSessions'
 import Performance from '../components/Charts/Performance'
 import Score from '../components/Charts/Score'
 import { useParams } from 'react-router-dom'
-import { useSportSeeAPI } from '../utils/hooks/useSportSeeAPI'
+import { UseSportSeeAPI } from '../utils/hooks/useSportSeeAPI'
 import { MockedAPI } from '../utils/mock/mockedAPI'
 
 /**
@@ -21,35 +21,20 @@ function Dashboard() {
 
     const idFinal = Number(id)
 
+    //Switch on false for UseSportSeeAPI or true for MockedAPI
+    const mockedData = true
 
-    // Switch on MockedAPI
+    const { data, isLoading } = mockedData ? MockedAPI("data", idFinal) : UseSportSeeAPI("data", idFinal)
 
-    // const { data, isLoading } = MockedAPI("data", idFinal)
+    const finalData = mockedData ? data[0] : data.data
+
+    const activityData = mockedData ? MockedAPI("activity", idFinal) : UseSportSeeAPI("activity", idFinal)
+
+    const averageSessionsData = mockedData ? MockedAPI("average-sessions", idFinal) : UseSportSeeAPI("average-sessions", idFinal)
+
+    const performanceData = mockedData ? MockedAPI("performance", idFinal) : UseSportSeeAPI("performance", idFinal)
+
     
-    // const finalData = data[0]
-
-    // const activityData = MockedAPI("activity", idFinal)
-
-    // const averageSessionsData = MockedAPI("average-sessions", idFinal)
-
-    // const performanceData = MockedAPI("performance", idFinal)
-
-    // const mockedData = true
-
-
-    //Switch on useSportSeeAPI
-
-    const { data, isLoading } = useSportSeeAPI("data", idFinal)
-
-    const finalData = data.data
-
-    const activityData = useSportSeeAPI("activity", idFinal)
-
-    const averageSessionsData = useSportSeeAPI("average-sessions", idFinal)
-
-    const performanceData = useSportSeeAPI("performance", idFinal)
-
-    const mockedData = false
 
     if (!isLoading) {
         return (

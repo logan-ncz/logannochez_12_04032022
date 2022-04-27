@@ -1,4 +1,4 @@
-# SportSee - Juillet 2021
+# SportSee - Mars 2022
 
 Code source du **Projet 12** - **_Développez un tableau de bord d'analytics avec React_** du parcours **Développeur Front-end** d'_OpenClassrooms_.
 
@@ -13,7 +13,7 @@ Code source du **Projet 12** - **_Développez un tableau de bord d'analytics ave
 
 Clone the repository of _SportSee_ back-end:
 
-`git clone https://github.com/logan-ncz/logannochez_12_04032022`
+`git clone https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard`
 
 Go to back-end directory:
 

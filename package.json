@@ -1,6 +1,8 @@
 {
   "name": "sport-see",
   "version": "0.1.0",
+  "description": "Frontend for the 12th project of the new path Front-end Developper",
+  "author": "lnochez <logan.nochez1@gmail.com>",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",

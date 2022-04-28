@@ -1,12 +1,16 @@
+import { useParams } from 'react-router-dom'
+import { UseSportSeeAPI } from '../utils/hooks/useSportSeeAPI'
+import { MockedAPI } from '../utils/mock/mockedAPI'
+
 import AsideNav from '../components/AsideNav'
 import InfoCard from '../components/InfoCard'
+
 import Activity from '../components/Charts/Activity'
 import AverageSessions from '../components/Charts/AverageSessions'
 import Performance from '../components/Charts/Performance'
 import Score from '../components/Charts/Score'
-import { useParams } from 'react-router-dom'
-import { UseSportSeeAPI } from '../utils/hooks/useSportSeeAPI'
-import { MockedAPI } from '../utils/mock/mockedAPI'
+
+
 
 /**
  * Component used to call the Fetch fonction to retrieves the data, then render the user's Dashboard with the differents charts.
